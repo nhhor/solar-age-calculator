@@ -1,9 +1,9 @@
-import { MyDate } from './../src/backend.js'
+import { SolarAge } from './../src/backend.js'
 
-describe('MyDate', ()=> {
+describe('SolarAge', ()=> {
 
-  test('should return true for a real date', () => {
-    let myDate = new MyDate('2015-12-25');
-    expect(myDate.dateCheck()).toEqual(true);
+  test('Should correctly calculate number of Earth years to Mercury years', () => {
+    let earthAge = new SolarAge(10);
+    expect(earthAge.mercury).toEqual(41.67);
   });
 });
