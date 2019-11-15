@@ -30,9 +30,19 @@ export class SolarAge {
     return this.calcMars();
   }
 
+  // Jupiter Method
+  calcJupiter() {
+    return parseFloat((this.earthAge / 11.86).toFixed(2));
+  }
+  // Jupiter Getter
+  get jupiter() {
+    return this.calcJupiter();
+  }
+
 }
 
 let earthAge = new SolarAge(10);
 console.log("Mercury: ",earthAge.mercury); // 41.67
 console.log("Venus: ",earthAge.venus); // 16.13
 console.log("Mars: ",earthAge.mars); // 5.32
+console.log("Jupiter: ",earthAge.jupiter); // 2.53
