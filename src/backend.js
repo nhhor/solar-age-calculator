@@ -13,6 +13,26 @@ export class SolarAge {
     this.jupiterTimeLeft = this.jupiterLeft;
   }
 
+
+
+  // Planets Method
+  calcPlanets() {
+    const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
+    const planetRatio = [1, 0.24, 0.62, 1.88, 11.86]
+    let planetMath = planetNames.forEach(function(planet, index) {
+      earthAge["ageOn"+planet] = parseFloat((planetRatio[index] * earthAge.earthAge).toFixed(2));
+    });
+    return planetMath;
+  }
+  // Planet Getter
+  get planets() {
+    return this.calcPlanets();
+  }
+
+
+
+
+
   // Mercury Method
   calcMercury() {
     return parseFloat((this.earthAge / 0.24).toFixed(2));
@@ -95,5 +115,6 @@ export class SolarAge {
   }
 }
 
-// let earthAge = new SolarAge(10);
-// console.log(earthAge);
+let earthAge = new SolarAge(82.2);
+earthAge.planets;
+console.log(earthAge);
