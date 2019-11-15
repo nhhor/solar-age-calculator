@@ -45,6 +45,7 @@ describe('SolarAge', ()=> {
     expect(earthAge.venusLeft).toEqual(51.94);
     expect(earthAge.marsLeft).toEqual(17.13);
     expect(earthAge.jupiterLeft).toEqual(2.72);
+    console.log(earthAge);
   });
 
 

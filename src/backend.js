@@ -2,6 +2,15 @@ export class SolarAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
     this.averageLifespan = 72.2;
+    this.mercuryAge = this.mercury;
+    this.venusAge = this.venus;
+    this.marsAge = this.mars;
+    this.jupiterAge = this.jupiter;
+    this.earthTimeLeft = this.earthLeft;
+    this.mercuryTimeLeft = this.mercuryLeft;
+    this.venusTimeLeft = this.venusLeft;
+    this.marsTimeLeft = this.marsLeft;
+    this.jupiterTimeLeft = this.jupiterLeft;
   }
 
   // Mercury Method
@@ -51,25 +60,40 @@ export class SolarAge {
 
   // MercuryLeft Method
   calcMercuryLeft() {
-    return parseFloat((earthAge.earthLeft / 0.24).toFixed(2));
+    return parseFloat((this.earthLeft / 0.24).toFixed(2));
   }
   // MercuryLeft Getter
   get mercuryLeft() {
     return this.calcMercuryLeft();
   }
 
-  // BIND ALL CALCULATIONS INTO SolarAge.
-  bindCalculations() {
-    this.mercuryAge = earthAge.mercury;
-    this.venusAge = earthAge.venus;
-    this.marsAge = earthAge.mars;
-    this.jupiterAge = earthAge.jupiter;
-    this.earthTimeLeft = earthAge.earthLeft;
-    this.mercuryTimeLeft = earthAge.mercuryLeft;
+  // VenusLeft Method
+  calcVenusLeft() {
+    return parseFloat((this.earthLeft / 0.62).toFixed(2));
+  }
+  // VenusLeft Getter
+  get venusLeft() {
+    return this.calcVenusLeft();
+  }
 
+  // MarsLeft Method
+  calcMarsLeft() {
+    return parseFloat((this.earthLeft / 1.88).toFixed(2));
+  }
+  // MarsLeft Getter
+  get marsLeft() {
+    return this.calcMarsLeft();
+  }
+
+  // JupiterLeft Method
+  calcJupiterLeft() {
+    return parseFloat((this.earthLeft / 11.86).toFixed(2));
+  }
+  // JupiterLeft Getter
+  get jupiterLeft() {
+    return this.calcJupiterLeft();
   }
 }
 
-let earthAge = new SolarAge(40);
-earthAge.bindCalculations();
-console.log(earthAge);
+// let earthAge = new SolarAge(10);
+// console.log(earthAge);
