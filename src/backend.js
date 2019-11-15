@@ -40,16 +40,25 @@ export class SolarAge {
     return this.calcJupiter();
   }
 
-  // BIND ALL CALCULATIONS INTO SolarAge.
-  bindCalculations() {
-    earthAge.mercuryAge = earthAge.mercury;
-    earthAge.venusAge = earthAge.venus;
-    earthAge.marsAge = earthAge.mars;
-    earthAge.jupiterAge = earthAge.jupiter;
+  // EarthLeft Method
+  calcEarthLeft() {
+    return parseFloat((this.averageLifespan - this.earthAge).toFixed(2));
+  }
+  // EarthLeft Getter
+  get earthLeft() {
+    return this.calcEarthLeft();
   }
 
+  // BIND ALL CALCULATIONS INTO SolarAge.
+  bindCalculations() {
+    this.mercuryAge = earthAge.mercury;
+    this.venusAge = earthAge.venus;
+    this.marsAge = earthAge.mars;
+    this.jupiterAge = earthAge.jupiter;
+    this.earthTimeLeft = earthAge.earthLeft;
+  }
 }
 
-let earthAge = new SolarAge(10);
+let earthAge = new SolarAge(40);
 earthAge.bindCalculations();
 console.log(earthAge);

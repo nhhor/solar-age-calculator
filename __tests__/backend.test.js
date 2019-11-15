@@ -39,13 +39,13 @@ describe('SolarAge', ()=> {
 
   // Earth Span Left
   test('Should correctly calculate how many years a user has left to live on each planet.', () => {
-    let earthAge = new SolarAge(10);
+    let earthAge = new SolarAge(40);
     // console.log("EarthLeft: ",earthAge.earthLeft); // 62.20
-    expect(earthAge.earthLeft).toEqual(62.20);
-    expect(earthAge.mercuryLeft).toEqual(259.17);
-    expect(earthAge.venusLeft).toEqual(100.320);
-    expect(earthAge.marsLeft).toEqual(33.09);
-    expect(earthAge.jupiterLeft).toEqual(5.24);
+    expect(earthAge.earthLeft).toEqual(32.2);
+    expect(earthAge.mercuryLeft).toEqual(134.17);
+    expect(earthAge.venusLeft).toEqual(51.94);
+    expect(earthAge.marsLeft).toEqual(17.13);
+    expect(earthAge.jupiterLeft).toEqual(2.72);
   });
 
 
