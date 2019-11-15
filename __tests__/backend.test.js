@@ -1,11 +1,13 @@
 import { SolarAge } from './../src/backend.js'
 
+
 describe('SolarAge', ()=> {
 
   // Earth
   test('Should correctly add user age into object (earthAge).', () => {
     let earthAge = new SolarAge(10);
-    // console.log("Earth: ",earthAge.earthAge);
+    earthAge.planets;
+    console.log(earthAge);
     expect(earthAge.earthAge).toEqual(10);
   });
 
