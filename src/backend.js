@@ -1,6 +1,7 @@
 export class SolarAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
+    this.averageLifespan = 72.2;
   }
 
   // Mercury Method
@@ -39,10 +40,16 @@ export class SolarAge {
     return this.calcJupiter();
   }
 
+  // BIND ALL CALCULATIONS INTO SolarAge.
+  bindCalculations() {
+    earthAge.mercuryAge = earthAge.mercury;
+    earthAge.venusAge = earthAge.venus;
+    earthAge.marsAge = earthAge.mars;
+    earthAge.jupiterAge = earthAge.jupiter;
+  }
+
 }
 
 let earthAge = new SolarAge(10);
-console.log("Mercury: ",earthAge.mercury); // 41.67
-console.log("Venus: ",earthAge.venus); // 16.13
-console.log("Mars: ",earthAge.mars); // 5.32
-console.log("Jupiter: ",earthAge.jupiter); // 2.53
+earthAge.bindCalculations();
+console.log(earthAge);
