@@ -14,4 +14,10 @@ describe('SolarAge', ()=> {
     expect(earthAge.venus).toEqual(16.13);
   });
 
+  // Mars
+  test('Should correctly calculate number of Earth years to Venus years', () => {
+    let earthAge = new SolarAge(10);
+    expect(earthAge.mars).toEqual(5.32);
+  });
+
 });

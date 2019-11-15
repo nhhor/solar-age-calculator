@@ -34,7 +34,7 @@ The fully deployed project is hosted on GH-Pages [HERE](https://nhhor.github.io/
 |-|-|-|
 |Application should take an age in earth years from a user and calculate the corresponding (1 : 0.24) number of Mercury years.|10|41.66|
 |Application should take an age in earth years from a user and calculate the corresponding (1 : 0.62) number of Venus years.|10|16.13|
-
+|Application should take an age in earth years from a user and calculate the corresponding (1 : 1.88) number of Mars years.|10|5.32|
 
 ## References
 * None
