@@ -21,8 +21,18 @@ export class SolarAge {
     return this.calcVenus();
   }
 
+  // Mars Method
+  calcMars() {
+    return parseFloat((this.earthAge / 1.88).toFixed(2));
+  }
+  // Mars Getter
+  get mars() {
+    return this.calcMars();
+  }
+
 }
 
 let earthAge = new SolarAge(10);
 console.log("Mercury: ",earthAge.mercury); // 41.67
 console.log("Venus: ",earthAge.venus); // 16.13
+console.log("Mars: ",earthAge.mars); // 5.32
