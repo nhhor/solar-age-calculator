@@ -49,6 +49,15 @@ export class SolarAge {
     return this.calcEarthLeft();
   }
 
+  // MercuryLeft Method
+  calcMercuryLeft() {
+    return parseFloat((earthAge.earthLeft / 0.24).toFixed(2));
+  }
+  // MercuryLeft Getter
+  get mercuryLeft() {
+    return this.calcMercuryLeft();
+  }
+
   // BIND ALL CALCULATIONS INTO SolarAge.
   bindCalculations() {
     this.mercuryAge = earthAge.mercury;
@@ -56,6 +65,8 @@ export class SolarAge {
     this.marsAge = earthAge.mars;
     this.jupiterAge = earthAge.jupiter;
     this.earthTimeLeft = earthAge.earthLeft;
+    this.mercuryTimeLeft = earthAge.mercuryLeft;
+
   }
 }
 
