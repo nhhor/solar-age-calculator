@@ -17,6 +17,12 @@ $(document).ready(function(){
     $(".marsAge").text(earthAge.mars);
     $(".jupiterAge").text(earthAge.jupiter);
 
+    $(".earthTimeLeft").text(earthAge.earthLeft);
+    $(".mercuryTimeLeft").text(earthAge.mercuryLeft);
+    $(".venusTimeLeft").text(earthAge.venusLeft);
+    $(".marsTimeLeft").text(earthAge.marsLeft);
+    $(".jupiterTimeLeft").text(earthAge.jupiterLeft);
+
     // earthAge.planets;
     console.log("BE earthAge: ",earthAge);
 

@@ -13,7 +13,7 @@ export class SolarAge {
     this.jupiterTimeLeft = this.jupiterLeft;
   }
 
-
+  // NOTES: I was sttempting to refactor the (very) verbose number of methods for each calculation into one or two loops, and the first loop worked well but I could not ()after several hours) get them to reference correctly in the test environment. So, this is currenly scrapped but I'd appreciate some feedback. ~Noah
   // // Planets Method
   // calcPlanets(earthAge) {
   //   const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
@@ -27,9 +27,6 @@ export class SolarAge {
   // get planets() {
   //   return this.calcPlanets();
   // }
-
-
-
 
   // Mercury Method
   calcMercury() {
