@@ -8,11 +8,17 @@ $(document).ready(function(){
   $("form#ageForm").submit(function(event){
     event.preventDefault();
 
-    let earthAge = new SolarAge(40);
-    earthAge.planets;
+    let userAge = $("#userAge").val();
+    let earthAge = new SolarAge(userAge);
 
+    $(".earthAge").text(earthAge.earthAge);
+    $(".mercuryAge").text(earthAge.mercury);
+    $(".venusAge").text(earthAge.venus);
+    $(".marsAge").text(earthAge.mars);
+    $(".jupiterAge").text(earthAge.jupiter);
+
+    // earthAge.planets;
     console.log("BE earthAge: ",earthAge);
-    console.log("BE earthAGE.ageOnEarth: ",earthAge.ageOnEarth);
 
   });
 });

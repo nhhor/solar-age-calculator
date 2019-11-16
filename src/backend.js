@@ -2,22 +2,31 @@ export class SolarAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
     this.averageLifespan = 72.2;
+    this.mercuryAge = this.mercury;
+    this.venusAge = this.venus;
+    this.marsAge = this.mars;
+    this.jupiterAge = this.jupiter;
+    this.earthTimeLeft = this.earthLeft;
+    this.mercuryTimeLeft = this.mercuryLeft;
+    this.venusTimeLeft = this.venusLeft;
+    this.marsTimeLeft = this.marsLeft;
+    this.jupiterTimeLeft = this.jupiterLeft;
   }
 
-  // Planets Method
-  calcPlanets(earthAge) {
-    const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
-    const planetRatio = [1, 0.24, 0.62, 1.88, 11.86];
-    let eachPlanet = planetNames.forEach(function(planet, index) {
-      this["ageOn"+planet] = parseFloat((planetRatio[index] * (earthAge)).toFixed(2));
-      return eachPlanet;
-    });
-  }
-  // Planet Getter
-  get planets() {
-    return this.calcPlanets();
-  }
 
+  // // Planets Method
+  // calcPlanets(earthAge) {
+  //   const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
+  //   const planetRatio = [1, 0.24, 0.62, 1.88, 11.86];
+  //   let eachPlanet = planetNames.forEach(function(planet, index) {
+  //     earthAge["ageOn"+planet] = parseFloat((planetRatio[index] * (earthAge)).toFixed(2));
+  //     return eachPlanet;
+  //   });
+  // }
+  // // Planet Getter
+  // get planets() {
+  //   return this.calcPlanets();
+  // }
 
 
 

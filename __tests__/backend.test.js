@@ -6,8 +6,8 @@ describe('SolarAge', ()=> {
   // Earth
   test('Should correctly add user age into object (earthAge).', () => {
     let earthAge = new SolarAge(10);
-    earthAge.planets;
-    console.log(earthAge);
+    // earthAge.planets;
+    // console.log(earthAge);
     expect(earthAge.earthAge).toEqual(10);
   });
 
