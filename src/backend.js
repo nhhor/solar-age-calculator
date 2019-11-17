@@ -11,22 +11,25 @@ export class SolarAge {
     this.venusTimeLeft = this.venusLeft;
     this.marsTimeLeft = this.marsLeft;
     this.jupiterTimeLeft = this.jupiterLeft;
+    this.planets;
   }
 
   // NOTES: I was sttempting to refactor the (very) verbose number of methods for each calculation into one or two loops, and the first loop worked well but I could not ()after several hours) get them to reference correctly in the test environment. So, this is currenly scrapped but I'd appreciate some feedback. ~Noah
-  // // Planets Method
-  // calcPlanets(earthAge) {
-  //   const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
-  //   const planetRatio = [1, 0.24, 0.62, 1.88, 11.86];
-  //   let eachPlanet = planetNames.forEach(function(planet, index) {
-  //     earthAge["ageOn"+planet] = parseFloat((planetRatio[index] * (earthAge)).toFixed(2));
-  //     return eachPlanet;
-  //   });
-  // }
-  // // Planet Getter
-  // get planets() {
-  //   return this.calcPlanets();
-  // }
+  // Planets Method
+  calcPlanets() {
+    const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
+    const planetRatio = [1, 0.24, 0.62, 1.88, 11.86];
+    let age = this.earthAge;
+    let earthAge = this;
+    let planetMath = planetNames.forEach(function(planet, index) {
+      earthAge["ageOn"+planet] = parseFloat((age / planetRatio[index]).toFixed(2));
+    });
+    return planetMath;
+  }
+  // Planet Getter
+  get planets() {
+    return this.calcPlanets();
+  }
 
   // Mercury Method
   calcMercury() {

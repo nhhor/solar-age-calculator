@@ -8,7 +8,7 @@ $(document).ready(function(){
   $("form#ageForm").submit(function(event){
     event.preventDefault();
 
-    let userAge = $("#userAge").val();
+    let userAge = parseFloat($("#userAge").val());
     let earthAge = new SolarAge(userAge);
 
     $(".earthAge").text(earthAge.earthAge);
@@ -23,7 +23,6 @@ $(document).ready(function(){
     $(".marsTimeLeft").text(earthAge.marsLeft);
     $(".jupiterTimeLeft").text(earthAge.jupiterLeft);
 
-    // earthAge.planets;
     console.log("BE earthAge: ",earthAge);
 
   });

@@ -8,35 +8,35 @@ describe('SolarAge', ()=> {
     let earthAge = new SolarAge(10);
     // earthAge.planets;
     // console.log(earthAge);
-    expect(earthAge.earthAge).toEqual(10);
+    expect(earthAge.ageOnEarth).toEqual(10);
   });
 
   // Mercury
   test('Should correctly calculate number of Earth years to Mercury years.', () => {
     let earthAge = new SolarAge(10);
     // console.log("Mercury: ",earthAge.mercury); // 41.67
-    expect(earthAge.mercury).toEqual(41.67);
+    expect(earthAge.ageOnMercury).toEqual(41.67);
   });
 
   // Venus
   test('Should correctly calculate number of Earth years to Venus years.', () => {
     let earthAge = new SolarAge(10);
     // console.log("Venus: ",earthAge.venus); // 16.13
-    expect(earthAge.venus).toEqual(16.13);
+    expect(earthAge.ageOnVenus).toEqual(16.13);
   });
 
   // Mars
   test('Should correctly calculate number of Earth years to Mars years.', () => {
     let earthAge = new SolarAge(10);
     // console.log("Mars: ",earthAge.mars); // 5.32
-    expect(earthAge.mars).toEqual(5.32);
+    expect(earthAge.ageOnMars).toEqual(5.32);
   });
 
   // Jupiter
   test('Should correctly calculate number of Earth years to Jupiter years.', () => {
     let earthAge = new SolarAge(30);
     // console.log("Jupiter: ",earthAge.jupiter); // 2.53
-    expect(earthAge.jupiter).toEqual(2.53);
+    expect(earthAge.ageOnJupiter).toEqual(2.53);
   });
 
   // Earth Span Left
