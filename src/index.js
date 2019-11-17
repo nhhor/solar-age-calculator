@@ -12,16 +12,16 @@ $(document).ready(function(){
     let earthAge = new SolarAge(userAge);
 
     $(".earthAge").text(earthAge.earthAge);
-    $(".mercuryAge").text(earthAge.mercury);
-    $(".venusAge").text(earthAge.venus);
-    $(".marsAge").text(earthAge.mars);
-    $(".jupiterAge").text(earthAge.jupiter);
+    $(".mercuryAge").text(earthAge.ageOnMercury);
+    $(".venusAge").text(earthAge.ageOnVenus);
+    $(".marsAge").text(earthAge.ageOnMars);
+    $(".jupiterAge").text(earthAge.ageOnJupiter);
 
-    $(".earthTimeLeft").text(earthAge.earthLeft);
-    $(".mercuryTimeLeft").text(earthAge.mercuryLeft);
-    $(".venusTimeLeft").text(earthAge.venusLeft);
-    $(".marsTimeLeft").text(earthAge.marsLeft);
-    $(".jupiterTimeLeft").text(earthAge.jupiterLeft);
+    $(".earthTimeLeft").text(earthAge.timeRemainingOnEarth);
+    $(".mercuryTimeLeft").text(earthAge.timeRemainingOnMercury);
+    $(".venusTimeLeft").text(earthAge.timeRemainingOnVenus);
+    $(".marsTimeLeft").text(earthAge.timeRemainingOnMars);
+    $(".jupiterTimeLeft").text(earthAge.timeRemainingOnJupiter);
 
     console.log("BE earthAge: ",earthAge);
 
