@@ -10,16 +10,14 @@
     <form id="ageForm">
       <div class="form-group">
         <label for="userAge">Please enter your age:</label>
-        <input id="userAge" class="form-control" type="number" name="userAge">
+        <input id="userAge" class="form-control" type="number" name="userAge" required>
       </div>
       <div class="form-group">
-        <label for="averageLifespan">Please enter the average life expectancy for your demographic (I'm sorry...):<BR><span class="small">Currently, the world average is about 72 years.</span></label>
-        <input id="averageLifespan" class="form-control" type="number" name="averageLifespan" placeholder="72">
-      </div>
-      <BR>
+        <label for="averageLifespan">Please enter the average life expectancy for your demographic (I'm sorry...):<BR><span class="blockquote-footer">Currently, the world average is about 72 years.</span></label>
+          <input id="averageLifespan" class="form-control" type="number" name="averageLifespan" required>
+        </div>
         <button type="submit" class="btn btn-warning">Submit</button>
       </form>
-      <hr>
 
       <div class="timeOnPlanets">
         <h4>Age:</h4>
@@ -28,7 +26,6 @@
         <p>And, on <span class="planetText">Venus</span> you would be <span class="venusAge"></span> years old.</p>
         <p>On <span class="planetText">Mars</span> you would be <span class="marsAge"></span> years old.</p>
         <p>Finally, on <span class="planetText">Jupiter</span> you would only be <span class="jupiterAge"></span> years old!</p>
-        <hr>
       </div>
 
       <div class="timeRemaining">
