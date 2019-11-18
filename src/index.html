@@ -8,35 +8,47 @@
   <div class="container">
     <h1>Solar Age Calculator</h1>
     <form id="ageForm">
-
-      <label for="userAge">Please enter an age:</label>
-      <input id="userAge" type="number" name="userAge">
-      <button type="submit" class="btn btn-warning">Submit</button>
-    </form>
-    <div class="results">
-      <h4>Age:</h4>
-      <p>Sure, on earth you are <span class="earthAge"></span> years old.</p>
-      <p>But did you know on Mercury you would have traveled around the Sun <span class="mercuryAge"></span> times already?</p>
-      <p>And, on Venus you would be <span class="venusAge"></span> years old.</p>
-      <p>On Mars you would be <span class="marsAge"></span> years old.</p>
-      <p>Finally, on Jupiter you would only be <span class="jupiterAge"></span> years old!</p>
+      <div class="form-group">
+        <label for="userAge">Please enter your age:</label>
+        <input id="userAge" class="form-control" type="number" name="userAge">
+      </div>
+      <div class="form-group">
+        <label for="averageLifespan">Please enter the average life expectancy for your demographic (I'm sorry...):<BR><span class="small">Currently, the world average is about 72 years.</span></label>
+        <input id="averageLifespan" class="form-control" type="number" name="averageLifespan" placeholder="72">
+      </div>
+      <BR>
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
       <hr>
 
-      <h4>Average Life Span:</h4>
-      <p>Now, the average lifespan on Earth is 72.2 years, so you're likely to live for another <span class="earthTimeLeft"></span> years.</p>
-      <p>That would be <span class="mercuryTimeLeft"></span> years on Mercury.</p>
-      <p><span class="venusTimeLeft"></span> years on Venus.</p>
-      <p><span class="marsTimeLeft"></span> years on Mars.</p>
-      <p>But only <span class="jupiterTimeLeft"></span> years on Jupiter.</p>
+      <div class="timeOnPlanets">
+        <h4>Age:</h4>
+        <p>Sure, on <span class="planetText">Earth</span> you are <span class="earthAge"></span> years old.</p>
+        <p>But did you know on <span class="planetText">Mercury</span> you would have traveled around the Sun <span class="mercuryAge"></span> times already?</p>
+        <p>And, on <span class="planetText">Venus</span> you would be <span class="venusAge"></span> years old.</p>
+        <p>On <span class="planetText">Mars</span> you would be <span class="marsAge"></span> years old.</p>
+        <p>Finally, on <span class="planetText">Jupiter</span> you would only be <span class="jupiterAge"></span> years old!</p>
+        <hr>
+      </div>
 
+      <div class="timeRemaining">
+        <h4>Average Life Span:</h4>
+        <p>Now, the average lifespan for you on <span class="planetText">Earth</span> is <span class="averageLifespan"></span> years, so you're likely to live for another <span class="earthTimeLeft"></span> years. (This is macabre...)</p>
+        <p>That would be <span class="mercuryTimeLeft"></span> years on <span class="planetText">Mercury</span>.</p>
+        <p><span class="venusTimeLeft"></span> years on <span class="planetText">Venus</span>.</p>
+        <p><span class="marsTimeLeft"></span> years on <span class="planetText">Mars</span>.</p>
+        <p>But only <span class="jupiterTimeLeft"></span> years on <span class="planetText">Jupiter</span>.</p>
+      </div>
 
-
-
-
-
-
+      <div class="timeBeyondAverageOn">
+        <h4>Time beyond Average:</h4>
+        <p>Now, the average lifespan for you on <span class="planetText">Earth</span> is <span class="averageLifespan"></span> years, so you've lived for <span class="earthTimeBeyondAverageOn"></span> years beyond that. (Congratulations!)</p>
+        <p>That would be <span class="mercuryTimeBeyondAverageOn"></span> years on <span class="planetText">Mercury</span>.</p>
+        <p><span class="venusTimeBeyondAverageOn"></span> years on <span class="planetText">Venus</span>.</p>
+        <p><span class="marsTimeBeyondAverageOn"></span> years on <span class="planetText">Mars</span>.</p>
+        <p>But only <span class="jupiterTimeBeyondAverageOn"></span> years on <span class="planetText">Jupiter</span>.</p>
+      </div>
 
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

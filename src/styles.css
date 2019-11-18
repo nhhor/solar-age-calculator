@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+
+.timeOnPlanets {
+  display: none;
+}
+.timeRemaining {
+  display: none;
+}
+.timeBeyondAverageOn {
+  display: none;
+}
+
+.planetText {
+  font-family: fantasy;
+  font-weight: bold;
+}
