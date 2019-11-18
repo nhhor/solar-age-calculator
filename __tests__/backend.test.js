@@ -39,7 +39,7 @@ describe('SolarAge', ()=> {
     expect(earthAge.ageOnJupiter).toEqual(2.53);
   });
 
-  // Earth Span Left
+  // Lifespan Left
   test('Should correctly calculate how many years a user has left to live on each planet.', () => {
     let earthAge = new SolarAge(40);
     expect(earthAge.timeRemainingOnEarth).toEqual(32.2);
@@ -47,6 +47,17 @@ describe('SolarAge', ()=> {
     expect(earthAge.timeRemainingOnVenus).toEqual(51.94);
     expect(earthAge.timeRemainingOnMars).toEqual(17.13);
     expect(earthAge.timeRemainingOnJupiter).toEqual(2.72);
+    // console.log(earthAge);
+  });
+
+  // Lifespan Beyond Average
+  test('Should correctly calculate how many years a user has lived beyond the average lifespan, on each planet.', () => {
+    let earthAge = new SolarAge(82.2);
+    expect(earthAge.timeRemainingOnEarth).toEqual(10);
+    expect(earthAge.timeRemainingOnMercury).toEqual(41.67);
+    expect(earthAge.timeRemainingOnVenus).toEqual(16.13);
+    expect(earthAge.timeRemainingOnMars).toEqual(5.32);
+    expect(earthAge.timeRemainingOnJupiter).toEqual(0.84);
     // console.log(earthAge);
   });
 
