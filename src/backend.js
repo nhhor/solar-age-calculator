@@ -1,7 +1,7 @@
 export class SolarAge {
-  constructor(earthAge) {
+  constructor(earthAge, averageLifespan) {
     this.earthAge = earthAge;
-    this.averageLifespan = 72.2;
+    this.averageLifespan = averageLifespan;
     this.planetAges;
     this.planetRemaining;
   }

@@ -9,7 +9,8 @@ $(document).ready(function(){
     event.preventDefault();
 
     let userAge = parseFloat($("#userAge").val());
-    let earthAge = new SolarAge(userAge);
+    let averageLifespan = 72.2;
+    let earthAge = new SolarAge(userAge, averageLifespan);
 
     $(".earthAge").text(earthAge.earthAge);
     $(".mercuryAge").text(earthAge.ageOnMercury);

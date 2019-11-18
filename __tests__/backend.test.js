@@ -27,7 +27,7 @@ describe('SolarAge', ()=> {
 
   // Mars
   test('Should correctly calculate number of Earth years to Mars years.', () => {
-    let earthAge = new SolarAge(10);
+    let earthAge = new SolarAge(10, 72.2);
     // console.log("Mars: ",earthAge.mars); // 5.32
     expect(earthAge.ageOnMars).toEqual(5.32);
   });
@@ -41,7 +41,7 @@ describe('SolarAge', ()=> {
 
   // Lifespan Left
   test('Should correctly calculate how many years a user has left to live on each planet.', () => {
-    let earthAge = new SolarAge(40);
+    let earthAge = new SolarAge(40, 72.2);
     expect(earthAge.timeRemainingOnEarth).toEqual(32.2);
     expect(earthAge.timeRemainingOnMercury).toEqual(134.17);
     expect(earthAge.timeRemainingOnVenus).toEqual(51.94);
@@ -52,7 +52,7 @@ describe('SolarAge', ()=> {
 
   // Lifespan Beyond Average
   test('Should correctly calculate how many years a user has lived beyond the average lifespan, on each planet.', () => {
-    let earthAge = new SolarAge(82.2);
+    let earthAge = new SolarAge(82.2, 72.2);
     expect(earthAge.timeRemainingOnEarth).toEqual(10);
     expect(earthAge.timeRemainingOnMercury).toEqual(41.67);
     expect(earthAge.timeRemainingOnVenus).toEqual(16.13);
