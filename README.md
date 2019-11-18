@@ -37,7 +37,7 @@ The fully deployed project is hosted on GH-Pages [HERE](https://nhhor.github.io/
 |Application should take an age in earth years from a user and calculate the corresponding (1 : 1.88) number of Mars years.|`10`|`5.32`|
 |Application should take an age in earth years from a user and calculate the corresponding (1 : 11.86) number of Jupiter years.|`30`|`2.53`|
 |Application should take an age in earth years from a user and calculate how many years a user has left to live on each planet (given average earth life expectancy).|earthAge: `40`|earthLeft: `32.2`, MercuryLeft: `134.17`, VenusLeft: `51.94`, MarsLeft: `17.13`, JupiterLeft: `2.72`|
-|If a user has already surpassed the average life expectancy, return the number of years they have lived past the life expectancy.|earthAge: `82.2`|earthLeft: `-10`, MercuryLeft: `-41.67`, VenusLeft: `-16.13`, MarsLeft: `-5.32`, JupiterLeft: `-0.84`|
+|If a user has already surpassed the average life expectancy, return the number of years they have lived past the life expectancy.|earthAge: `82.2`|earthLeft: `10`, MercuryLeft: `41.67`, VenusLeft: `16.13`, MarsLeft: `5.32`, JupiterLeft: `0.84`|
 
 ## References
 * None

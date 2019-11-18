@@ -29,9 +29,17 @@ export class SolarAge {
     const planetNames = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
     const planetRatio = [1, 0.24, 0.62, 1.88, 11.86];
     let remaining = this.averageLifespan - this.earthAge;
+    let overAverage = this.earthAge - this.averageLifespan;
     let earthAge = this;
     let planetMath = planetNames.forEach(function(planet, index) {
-      earthAge["timeRemainingOn"+planet] = parseFloat((remaining / planetRatio[index]).toFixed(2));
+      if (remaining < 0) {
+        earthAge["timeRemainingOn"+planet] = parseFloat((overAverage / planetRatio[index]).toFixed(2));
+      } else if (remaining >= 0) {
+        earthAge["timeRemainingOn"+planet] = parseFloat((remaining / planetRatio[index]).toFixed(2));
+      }
+      else {
+        earthAge["timeRemainingOn"+planet] = "Error on PlanetRemaining";
+      }
     });
     return planetMath;
   }
