@@ -33,7 +33,7 @@ export class SolarAge {
     let earthAge = this;
     let planetMath = planetNames.forEach(function(planet, index) {
       if (remaining < 0) {
-        earthAge["timeRemainingOn"+planet] = parseFloat((overAverage / planetRatio[index]).toFixed(2));
+        earthAge["timeBeyondAverageOn"+planet] = parseFloat((overAverage / planetRatio[index]).toFixed(2));
       } else if (remaining >= 0) {
         earthAge["timeRemainingOn"+planet] = parseFloat((remaining / planetRatio[index]).toFixed(2));
       }

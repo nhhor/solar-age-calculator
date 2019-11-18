@@ -53,11 +53,11 @@ describe('SolarAge', ()=> {
   // Lifespan Beyond Average
   test('Should correctly calculate how many years a user has lived beyond the average lifespan, on each planet.', () => {
     let earthAge = new SolarAge(82.2, 72.2);
-    expect(earthAge.timeRemainingOnEarth).toEqual(10);
-    expect(earthAge.timeRemainingOnMercury).toEqual(41.67);
-    expect(earthAge.timeRemainingOnVenus).toEqual(16.13);
-    expect(earthAge.timeRemainingOnMars).toEqual(5.32);
-    expect(earthAge.timeRemainingOnJupiter).toEqual(0.84);
+    expect(earthAge.timeBeyondAverageOnEarth).toEqual(10);
+    expect(earthAge.timeBeyondAverageOnMercury).toEqual(41.67);
+    expect(earthAge.timeBeyondAverageOnVenus).toEqual(16.13);
+    expect(earthAge.timeBeyondAverageOnMars).toEqual(5.32);
+    expect(earthAge.timeBeyondAverageOnJupiter).toEqual(0.84);
     // console.log(earthAge);
   });
 
